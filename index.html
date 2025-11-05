@@ -1,174 +1,252 @@
-<!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Spectral by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="landing is-preload">
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Glam Seoul — K-Beauty from Seoul to the World</title>
+  <meta name="description" content="Glam Seoul - K-Beauty 전문 무역 및 유통 브랜드. OEM/ODM, 수출대행, 글로벌 유통 네트워크.">
+  <!-- Google Font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fff; --muted:#666; --accent:#bfa07a; --pink:#f7e9e9;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:"Cabin",system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans KR",sans-serif; margin:0; color:#222; background:var(--bg); -webkit-font-smoothing:antialiased;}
+    header{border-bottom:1px solid #eee; background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.95)); position:sticky; top:0; z-index:10;}
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:28px;}
+    .brand{display:flex;align-items:center;gap:16px;}
+    .logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,#fff,#f8f4f2);display:flex;align-items:center;justify-content:center;font-weight:700;color:#222;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
+    nav{margin-left:auto}
+    nav a{color:var(--muted); text-decoration:none; margin-left:20px; font-weight:600; font-size:0.95rem}
+    .hero{padding:56px 16px; display:flex; gap:32px; align-items:center; justify-content:space-between;}
+    .hero .left{max-width:58%}
+    h1{font-family:"Playfair Display",serif; font-size:2.2rem; margin:0 0 12px 0; letter-spacing:-0.02em}
+    p.lead{color:var(--muted); margin:0 0 18px 0; line-height:1.6}
+    .cta{display:inline-block;background:var(--accent); color:#fff; padding:12px 18px; border-radius:8px; text-decoration:none; font-weight:700; margin-right:12px}
+    .secondary{border:1px solid #eee;padding:10px 16px;border-radius:8px;text-decoration:none;color:var(--muted);}
+    .card{background:#fff;border:1px solid #f1f1f1;border-radius:12px;padding:20px;box-shadow:0 6px 30px rgba(0,0,0,0.03)}
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:28px}
+    section{padding:48px 16px;}
+    h2{font-size:1.25rem;margin:0 0 12px 0}
+    .muted{color:var(--muted); font-size:0.95rem}
+    .two-col{display:grid; grid-template-columns:1fr 360px; gap:28px; align-items:start}
+    ul.simple{list-style:none;padding:0;margin:8px 0 0 0}
+    ul.simple li{margin:8px 0; color:var(--muted)}
+    footer{border-top:1px solid #eee;padding:28px;background:#faf9f7}
+    .social a{margin-right:12px;color:var(--muted);text-decoration:none}
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{flex-direction:column; align-items:flex-start}
+      .hero .left{max-width:100%}
+      .two-col{grid-template-columns:1fr; }
+      .grid{grid-template-columns:1fr 1fr}
+      nav{margin-top:12px}
+    }
+    @media (max-width:600px){
+      .grid{grid-template-columns:1fr}
+      h1{font-size:1.6rem}
+    }
+    /* subtle product hero image area */
+    .hero-img{background:linear-gradient(180deg,#fff,#f8f6f5);border-radius:12px;padding:18px;display:flex;align-items:center;justify-content:center;min-height:240px}
+    .hero-img img{max-width:100%;max-height:220px;border-radius:8px;object-fit:cover}
+    .badge{display:inline-block;font-size:0.8rem;padding:6px 10px;border-radius:999px;border:1px solid #eee;background:#fff;margin-bottom:12px}
+    .meta{font-size:0.9rem;color:var(--muted)}
+    .contact-btn{display:inline-block;margin-top:8px;padding:10px 14px;border-radius:8px;border:1px solid #eee;text-decoration:none}
+  </style>
+</head>
+<body>
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<header>
+  <div class="wrap" style="display:flex;align-items:center;">
+    <div class="brand">
+      <div class="logo">GS</div>
+      <div>
+        <div style="font-weight:700">Glam Seoul</div>
+        <div style="font-size:0.85rem;color:var(--muted)">K-Beauty Trade & Distribution</div>
+      </div>
+    </div>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Spectral</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="generic.html">Generic</a></li>
-											<li><a href="elements.html">Elements</a></li>
-											<li><a href="#">Sign Up</a></li>
-											<li><a href="#">Log In</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
+    <nav aria-label="Main Navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#business">Business</a>
+      <a href="#brands">Brands</a>
+      <a href="#products">Products</a>
+      <a href="#network">Global</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<h2>Spectral</h2>
-							<p>Another fine responsive<br />
-							site template freebie<br />
-							crafted by <a href="http://html5up.net">HTML5 UP</a>.</p>
-							<ul class="actions special">
-								<li><a href="#" class="button primary">Activate</a></li>
-							</ul>
-						</div>
-						<a href="#one" class="more scrolly">Learn More</a>
-					</section>
+<main class="wrap" id="home">
+  <section class="hero">
+    <div class="left">
+      <div class="badge">Since 2025 · K-Beauty Export & Sourcing</div>
+      <h1>From Seoul to the World — <br><span style="color:var(--accent)">Delivering the Essence of Korean Beauty</span></h1>
+      <p class="lead">Glam Seoul은 엄선된 한국 뷰티 브랜드와 협업하여, 글로벌 바이어가 신뢰할 수 있는 제품을 제공합니다. OEM/ODM, 도소매 유통, 수출 대행까지 원스톱으로 지원합니다.</p>
+      <a class="cta" href="#contact">파트너십 문의</a>
+      <a class="secondary" href="#business">사업분야 보기</a>
 
-				<!-- One -->
-					<section id="one" class="wrapper style1 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Arcu aliquet vel lobortis ata nisl<br />
-								eget augue amet aliquet nisl cep donec</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
-							</header>
-							<ul class="icons major">
-								<li><span class="icon fa-gem major style1"><span class="label">Lorem</span></span></li>
-								<li><span class="icon fa-heart major style2"><span class="label">Ipsum</span></span></li>
-								<li><span class="icon solid fa-code major style3"><span class="label">Dolor</span></span></li>
-							</ul>
-						</div>
-					</section>
+      <div style="margin-top:18px" class="meta">
+        <strong>Global channels:</strong> Alibaba · Amazon · Rakuten · Shopee · B2B Partnerships
+      </div>
+    </div>
 
-				<!-- Two -->
-					<section id="two" class="wrapper alt style2">
-						<section class="spotlight">
-							<div class="image"><img src="images/pic01.jpg" alt="" /></div><div class="content">
-								<h2>Magna primis lobortis<br />
-								sed ullamcorper</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="images/pic02.jpg" alt="" /></div><div class="content">
-								<h2>Tortor dolore feugiat<br />
-								elementum magna</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="images/pic03.jpg" alt="" /></div><div class="content">
-								<h2>Augue eleifend aliquet<br />
-								sed condimentum</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
-							</div>
-						</section>
-					</section>
+    <div class="hero-img card">
+      <!-- Replace with real product or brand photo -->
+      <img src="images/hero-placeholder.jpg" alt="Glam Seoul product preview (replace image)">
+    </div>
+  </section>
 
-				<!-- Three -->
-					<section id="three" class="wrapper style3 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Accumsan mus tortor nunc aliquet</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
-							</header>
-							<ul class="features">
-								<li class="icon fa-paper-plane">
-									<h3>Arcu accumsan</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon solid fa-laptop">
-									<h3>Ac Augue Eget</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon solid fa-code">
-									<h3>Mus Scelerisque</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon solid fa-headphones-alt">
-									<h3>Mauris Imperdiet</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-heart">
-									<h3>Aenean Primis</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-flag">
-									<h3>Tortor Ut</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-							</ul>
-						</div>
-					</section>
+  <section id="about">
+    <div class="card two-col">
+      <div>
+        <h2>About Glam Seoul</h2>
+        <p class="muted">Glam Seoul은 2025년에 설립된 K-Beauty 전문 무역 및 유통 브랜드입니다. 한국의 감성과 기술이 결합된 제품을 전 세계에 소개하며, '글로벌 고객이 신뢰할 수 있는 K-Beauty 파트너'가 되는 것을 목표로 합니다.</p>
 
-				<!-- CTA -->
-					<section id="cta" class="wrapper style4">
-						<div class="inner">
-							<header>
-								<h2>Arcue ut vel commodo</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p>
-							</header>
-							<ul class="actions stacked">
-								<li><a href="#" class="button fit primary">Activate</a></li>
-								<li><a href="#" class="button fit">Learn More</a></li>
-							</ul>
-						</div>
-					</section>
+        <h3 style="margin-top:18px">Vision · 비전</h3>
+        <p class="muted">한국의 감성과 기술이 결합된 K-Beauty의 가치를 세계 속에 전하고, 글로벌 뷰티 시장을 선도하는 신뢰받는 브랜드 플랫폼으로 성장합니다.</p>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
+        <h3 style="margin-top:18px">Core Values</h3>
+        <ul class="simple">
+          <li>품질(Quality) — 검증된 제조사와의 협업</li>
+          <li>진정성(Authenticity) — 브랜드 고유 아이덴티티 존중</li>
+          <li>글로벌 마인드(Global) — 현지화 전략과 규정 준수</li>
+        </ul>
+      </div>
 
-			</div>
+      <aside style="padding-left:8px">
+        <div class="card" style="text-align:center;">
+          <div style="font-weight:700">Contact</div>
+          <div class="muted" style="margin:6px 0">파트너십 · 수출문의</div>
+          <div style="margin:12px 0">
+            <a class="contact-btn" href="mailto:contact@glamseoul.com">contact@glamseoul.com</a>
+          </div>
+          <div class="muted" style="font-size:0.88rem">Seoul, Republic of Korea</div>
+        </div>
+      </aside>
+    </div>
+  </section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  <section id="business">
+    <h2>Business · 주요 사업 분야</h2>
+    <p class="muted">Glam Seoul은 브랜드 소싱부터 제조 협력, 수출대행까지 K-Beauty의 해외 진출을 전 단계에서 지원합니다.</p>
 
-	</body>
+    <div class="grid" style="margin-top:16px">
+      <div class="card">
+        <h3>도소매 유통</h3>
+        <p class="muted">해외 온라인 채널(Amazon, Alibaba 등) 및 B2B 바이어 대상 도소매 판매를 지원합니다. 제품 큐레이션과 마켓 피드백을 통해 판매전략을 수립합니다.</p>
+      </div>
+      <div class="card">
+        <h3>글로벌 수출 에이전시</h3>
+        <p class="muted">수출 절차, 수출입 문서, 물류, 현지 규정(성분·라벨링) 대응 및 현지 마케팅까지 원스톱 지원합니다.</p>
+      </div>
+      <div class="card">
+        <h3>OEM / ODM</h3>
+        <p class="muted">검증된 제조파트너와 함께 컨셉 기획 → 포뮬레이션 → 패키지 디자인 → 인증을 진행하는 맞춤형 제품 개발 서비스를 제공합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="brands">
+    <h2>Brands · 협력 브랜드</h2>
+    <p class="muted">Glam Seoul은 자체 기획 라인과 함께 국내 우수 브랜드의 해외 진출을 돕습니다. (아래는 예시 레이아웃 — 실제 브랜드 로고 및 링크로 대체하세요.)</p>
+
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:14px">
+      <div class="card" style="min-width:180px">GLAM SEOUL ORIGINALS<br><small class="muted">Premium Skincare</small></div>
+      <div class="card" style="min-width:180px">Partner Brand A<br><small class="muted">Innovation Skincare</small></div>
+      <div class="card" style="min-width:180px">Partner Brand B<br><small class="muted">Clean Beauty</small></div>
+    </div>
+  </section>
+
+  <section id="products">
+    <h2>Products · 제품 카테고리</h2>
+    <p class="muted">스킨케어 중심의 라인업을 기본으로 메이크업·바디·남성용 제품까지 포괄합니다. 모든 제품은 글로벌 규정 및 품질 관리를 충족합니다.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h4>Skincare</h4>
+        <p class="muted">세럼, 미스트, 크림, 토너 등 — 한국의 기술과 트렌드를 반영한 핵심 제품군.</p>
+      </div>
+      <div class="card">
+        <h4>Makeup</h4>
+        <p class="muted">베이스, 립, 아이 등 컬러 라인과 스킨케어 결합형 메이크업.</p>
+      </div>
+      <div class="card">
+        <h4>Body & Hair</h4>
+        <p class="muted">바디로션, 클렌저, 헤어케어 등 부가 라인.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="network">
+    <h2>Global Network · 글로벌 네트워크</h2>
+    <p class="muted">미국·유럽·아시아 전역의 바이어와 협업하며, 글로벌 플랫폼(Alibaba, Amazon 등)을 통한 온라인 유통 경험이 풍부합니다. 현지 규정·인증(KFDA / GMP / ISO 등)에 기반한 맞춤형 진출 전략을 제공합니다.</p>
+
+    <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;">
+      <div class="card" style="min-width:260px">
+        <strong>주요 수출국</strong>
+        <div class="muted">USA · France · Japan · Singapore · UAE</div>
+      </div>
+      <div class="card" style="min-width:260px">
+        <strong>유통 채널</strong>
+        <div class="muted">Alibaba · Amazon · Rakuten · Shopee · Distributors</div>
+      </div>
+      <div class="card" style="min-width:260px">
+        <strong>인증·품질</strong>
+        <div class="muted">KFDA · GMP · ISO · Cruelty-Free(옵션)</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="card">
+      <h2>Contact · 문의하기</h2>
+      <p class="muted">파트너십, OEM/ODM, 수출·유통 관련 문의는 아래 연락처로 주세요. 문의 내용을 확인한 뒤 담당자가 회신 드립니다.</p>
+
+      <div style="margin-top:12px;display:flex;gap:18px;flex-wrap:wrap;">
+        <div>
+          <div style="font-weight:700">Email</div>
+          <div class="muted">contact@glamseoul.com</div>
+        </div>
+        <div>
+          <div style="font-weight:700">Office</div>
+          <div class="muted">Seoul, Republic of Korea</div>
+        </div>
+        <div>
+          <div style="font-weight:700">Global Channels</div>
+          <div class="muted">Alibaba / Amazon / B2B</div>
+        </div>
+      </div>
+
+      <form style="margin-top:16px;display:flex;flex-direction:column;gap:10px;max-width:720px;">
+        <input name="company" placeholder="Company / 회사명" style="padding:10px;border:1px solid #eee;border-radius:8px" />
+        <input name="name" placeholder="Your name / 담당자명" style="padding:10px;border:1px solid #eee;border-radius:8px" />
+        <input name="email" placeholder="Email" style="padding:10px;border:1px solid #eee;border-radius:8px" />
+        <textarea name="message" placeholder="Message / 문의 내용" rows="4" style="padding:10px;border:1px solid #eee;border-radius:8px"></textarea>
+        <button type="submit" style="padding:12px 16px;border-radius:10px;border:0;background:var(--accent);color:#fff;font-weight:700;cursor:pointer">Send</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap">
+    <div>
+      <div style="font-weight:700">Glam Seoul</div>
+      <div class="muted" style="font-size:0.9rem;margin-top:6px">© 2025 Glam Seoul. All rights reserved.</div>
+    </div>
+    <div style="text-align:right">
+      <div class="social">
+        <a href="#" aria-label="Instagram">@glamseoul_official</a>
+        <a href="#" aria-label="Alibaba">Alibaba</a>
+        <a href="#" aria-label="Amazon">Amazon</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
 </html>
