@@ -1,378 +1,477 @@
 <!DOCTYPE html>
-<html lang="ko" class="scroll-smooth">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Glam Seoul - K-Beauty 전문 무역 및 유통 브랜드. OEM/ODM, 수출대행, 글로벌 유통 네트워크.">
-    <title>Glam Seoul — From Seoul to the World</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome CDN (아이콘 적용) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <style>
-        /* 커스텀 폰트 적용 */
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-            background-color: #FFFEFA; /* 아이보리 화이트 */
-            color: #4A4441; /* 다크 브라운-그레이 (기본 텍스트) */
-            font-weight: 400;
-        }
-        
-        /* 템플릿의 제목 스타일 모방 (산세리프) */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Noto Sans KR', sans-serif;
-            font-weight: 500; /* 헤딩 굵기 */
-            letter-spacing: 0.025em;
-        }
-
-        /* 네비게이션 스크롤 시 배경 스타일 */
-        #navbar.scrolled {
-            background-color: rgba(255, 254, 250, 0.9); /* 아이보리 화이트 */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* 부드러운 그림자 */
-            backdrop-filter: blur(5px);
-        }
-        
-        /* 'Big Picture' 템플릿의 고정 배경 이미지 효과 */
-        .bg-fixed-parallax {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        /* 'Style 2' 섹션의 텍스트 컨테이너 스타일 */
-        .content-box {
-            background-color: #F8F7F3; /* 살짝 어두운 아이보리 */
-            padding: 4rem 3rem;
-        }
-        
-        /* 'Style 2' 섹션의 이미지 */
-        .image-box {
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            min-height: 400px;
-        }
-        
-        /* 링크 버튼 스타일 (소프트 골드) */
-        .action-button {
-            display: inline-block;
-            padding: 0.75rem 2rem;
-            border: 1px solid #BFAF92; /* 소프트 골드 */
-            border-radius: 0.375rem;
-            color: #BFAF92; /* 소프트 골드 */
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        .action-button:hover {
-            background-color: #BFAF92; /* 소프트 골드 */
-            color: #FFFEFA; /* 아이보리 화이트 */
-        }
-        
-        /* 스크롤 애니메이션 */
-        .fade-in-section {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in-section.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* 모바일 메뉴 스타일 */
-        #mobile-menu {
-            transition: transform 0.3s ease-in-out;
-        }
-    </style>
+    <meta name="description" content="Glam Seoul - K-Beauty Global Platform. 한국의 프리미엄 화장품을 세계로">
+    <meta name="keywords" content="K-Beauty, 한국 화장품, 스킨케어, 코스메틱, 수출, OEM, ODM">
+    <title>Glam Seoul - K-Beauty Global Platform</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body class="antialiased">
+<body>
 
-    <!-- Header (Navigation) -->
-    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center text-gray-900">
-            <a href="#home" class="text-2xl font-bold tracking-wider">Glam Seoul</a>
-            
-            <!-- 데스크탑 메뉴 -->
-            <div class="hidden md:flex space-x-6 text-sm uppercase tracking-widest">
-                <a href="#home" class="hover:text-gray-600">Home</a>
-                <a href="#about" class="hover:text-gray-600">About</a>
-                <a href="#business" class="hover:text-gray-600">Business</a>
-                <a href="#brands" class="hover:text-gray-600">Brands</a>
-                <a href="#products" class="hover:text-gray-600">Products</a>
-                <a href="#network" class="hover:text-gray-600">Network</a>
-                <a href="#contact" class="hover:text-gray-600">Contact</a>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#home">
+                    <span class="logo-icon">🩵</span>
+                    <span class="logo-text">GLAM SEOUL</span>
+                </a>
             </div>
-            
-            <!-- 모바일 메뉴 버튼 -->
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
-                    <i class="fas fa-bars fa-lg"></i>
-                </button>
-            </div>
-        </nav>
-        
-        <!-- 모바일 메뉴 (숨겨진 상태) -->
-        <div id="mobile-menu" class="md:hidden bg-white shadow-lg absolute top-full left-0 right-0 transform -translate-y-full -z-10 opacity-0" style="background-color: rgba(255, 254, 250, 0.95);">
-             <div class="flex flex-col items-center space-y-4 py-6 uppercase tracking-widest text-sm">
-                <a href="#home" class="mobile-menu-link hover:text-gray-600">Home</a>
-                <a href="#about" class="mobile-menu-link hover:text-gray-600">About</a>
-                <a href="#business" class="mobile-menu-link hover:text-gray-600">Business</a>
-                <a href="#brands" class="mobile-menu-link hover:text-gray-600">Brands</a>
-                <a href="#products" class="mobile-menu-link hover:text-gray-600">Products</a>
-                <a href="#network" class="mobile-menu-link hover:text-gray-600">Network</a>
-                <a href="#contact" class="mobile-menu-link hover:text-gray-600">Contact</a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#business">Business</a></li>
+                    <li><a href="#brands">Brands</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#network">Network</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </header>
 
-	<!-- Google tag (gtag.js) -->
-	 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABC123XYZ"></script>
-	 <script>
-	 window.dataLayer = window.dataLayer || [];
-	 function gtag(){dataLayer.push(arguments);}
-	 gtag('js', new Date());
-	 
-	 gtag('config', 'G-REV7Y1K2V6');
-	 </script>
-
-    <main>
-
-        <!-- 1. Home (홈) -->
-        <section id="home" class="h-screen flex items-center justify-center text-center bg-fixed-parallax" style="background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');">
-            <!-- 이미지 저작권: Unsplash의 S O C I A L . C U T -->
-            <div class="bg-white bg-opacity-70 p-10 rounded-lg backdrop-blur-sm text-gray-900 mx-4">
-                <h1 class="text-4xl sm:text-5xl md:text-7xl mb-4 leading-tight">
-                    한국의 감성과 기술이 빚어낸 K-Beauty,<br>
-                    이제 Glam Seoul이 전 세계로 전합니다.
-                </h1>
-                <p class="text-lg md:text-2xl font-light mb-8">
-                    “From Seoul to the World — Delivering the Essence of Korean Beauty.”
-                </p>
-                <div class="text-base md:text-lg uppercase tracking-widest font-semibold">
-                    Quality. Trend. Authenticity.
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title animate-fade-in">GLAM SEOUL</h1>
+                <p class="hero-subtitle animate-fade-in-delay-1">From Seoul to the World — Delivering the Essence of Korean Beauty</p>
+                <p class="hero-subtitle-kr animate-fade-in-delay-2">서울에서 세계로, 한국의 아름다움을 전하다</p>
+                <div class="hero-description animate-fade-in-delay-3">
+                    <p>한국의 감성과 기술이 빚어낸 K-Beauty,<br>
+                    이제 Glam Seoul이 전 세계로 전합니다.</p>
                 </div>
+                <div class="hero-tagline animate-fade-in-delay-4">
+                    <p>신뢰할 수 있는 K-Beauty 파트너</p>
+                    <p class="keywords">Quality · Trend · Authenticity</p>
+                </div>
+                <a href="#contact" class="btn btn-primary animate-fade-in-delay-5">Get Started</a>
             </div>
-        </section>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+            <span></span>
+        </div>
+    </section>
 
-        <!-- 2. About Us (회사 소개) - Style 2 (Right) -->
-        <section id="about" class="min-h-screen grid md:grid-cols-2 items-stretch">
-            <div class="content-box flex flex-col justify-center fade-in-section">
-                <div class="max-w-md mx-auto">
-                    <h2 class="text-4xl mb-6">About Us</h2>
-                    <h3 class="text-2xl font-semibold mb-4">회사 개요</h3>
-                    <p class="text-gray-700 mb-6 leading-relaxed">
-                        Glam Seoul은 2025년에 설립된 K-Beauty 전문 무역 및 유통 브랜드입니다.
-                        우리는 한국의 우수한 화장품을 세계 시장에 소개하며,
-                        “글로벌 고객이 신뢰할 수 있는 K-Beauty 파트너”라는 비전을 실현해 나가고 있습니다.
-                    </p>
-                    <p class="text-gray-700 mb-6 leading-relaxed">
-                        날카로운 시장 분석력과 산업 네트워크를 바탕으로
-                        미국, 유럽, 아시아 등 전 세계 바이어에게 한국의 혁신적인 뷰티 브랜드를 연결합니다.
-                    </p>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-icon">🪞</span>
+                <h2 class="section-title">About Us</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-main">
+                    <h3>회사 개요</h3>
+                    <p>Glam Seoul은 2025년에 설립된 K-Beauty 전문 무역 및 유통 브랜드입니다. 우리는 한국의 우수한 화장품을 세계 시장에 소개하며, "글로벌 고객이 신뢰할 수 있는 K-Beauty 파트너"라는 비전을 실현해 나가고 있습니다.</p>
                     
-                    <h3 class="text-2xl font-semibold mb-4">비전 (Vision)</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        한국의 감성과 기술이 결합된 K-Beauty의 가치를 세계 속에 전하고,
-                        글로벌 뷰티 시장을 선도하는 신뢰받는 브랜드 플랫폼으로 성장합니다.
-                    </p>
-                </div>
-            </div>
-            <div class="image-box" style="background-image: url('https://images.unsplash.com/photo-1556741533-4020f6011e38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
-                <!-- 이미지 저작권: Unsplash의 averie woodard (서울 화장품 매장) -->
-            </div>
-        </section>
-
-        <!-- 3. Business (사업 분야) - Style 2 (Left) -->
-        <section id="business" class="min-h-screen grid md:grid-cols-2 items-stretch">
-            <div class="image-box md:order-last" style="background-image: url('https://images.unsplash.com/photo-1587828017043-73d6e5a65c2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
-                <!-- 이미지 저작권: Unsplash의 CHUTTERSNAP (물류/박스) -->
-            </div>
-            <div class="content-box flex flex-col justify-center md:order-first fade-in-section">
-                <div class="max-w-md mx-auto">
-                    <h2 class="text-4xl mb-8">Business</h2>
-                    <ul class="space-y-6">
-                        <li>
-                            <h3 class="text-xl font-semibold mb-2">1. K-Beauty 도소매</h3>
-                            <p class="text-gray-700 leading-relaxed">트렌디하고 검증된 K-Beauty 제품을 국내외 유통망을 통해 공급합니다. 브랜드 가치와 품질 중심의 큐레이션으로 신뢰를 제공합니다.</p>
-                        </li>
-                        <li>
-                            <h3 class="text-xl font-semibold mb-2">2. 글로벌 무역 및 수출 에이전시</h3>
-                            <p class="text-gray-700 leading-relaxed">수출 프로세스, 인증, 물류, 마케팅까지 원스톱으로 지원하여 한국 뷰티 브랜드의 해외 진출을 돕습니다.</p>
-                        </li>
-                        <li>
-                            <h3 class="text-xl font-semibold mb-2">3. 브랜드 소싱 및 OEM/ODM</h3>
-                            <p class="text-gray-700 leading-relaxed">전문 제조사와 협력하여 해외 파트너 맞춤형 제품을 기획·개발합니다. 콘셉트, 디자인, 포장, 인증 전 과정을 컨설팅합니다.</p>
-                        </li>
-                        <li>
-                            <h3 class="text-xl font-semibold mb-2">4. 맞춤형 제품 개발</h3>
-                            <p class="text-gray-700 leading-relaxed">각 지역의 트렌드와 소비자 특성에 맞춘 맞춤형 솔루션을 제공합니다.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. Brands (브랜드 소개) - Style 1 -->
-        <section id="brands" class="min-h-screen flex items-center justify-center text-center bg-fixed-parallax" style="background-image: url('https://images.unsplash.com/photo-1611080512070-075867c87570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');">
-            <!-- 이미지 저작권: Unsplash의 Mathilde Langevin (핑크빛 질감) -->
-            <div class="bg-white bg-opacity-70 p-10 rounded-lg backdrop-blur-sm max-w-3xl mx-4 fade-in-section">
-                <h2 class="text-5xl mb-8">Brands</h2>
-                <p class="text-xl text-gray-800 mb-10 leading-relaxed">
-                    Glam Seoul은 한국의 다양한 프리미엄 뷰티 브랜드와 협력합니다.
-                </p>
-                <div class="space-y-6 text-left md:text-center">
-                    <div class="p-4 bg-black bg-opacity-5 rounded-lg">
-                        <h3 class="text-2xl font-semibold text-gray-900">GLAM SEOUL ORIGINALS</h3>
-                        <p class="text-gray-700">자체 기획 프리미엄 스킨케어 라인</p>
-                    </div>
-                    <div class="p-4 bg-black bg-opacity-5 rounded-lg">
-                        <h3 class="text-2xl font-semibold text-gray-900">Partner Brands</h3>
-                        <p class="text-gray-700">국내 우수 중소 뷰티 브랜드의 해외 진출 파트너</p>
-                    </div>
-                    <div class="p-4 bg-black bg-opacity-5 rounded-lg">
-                        <h3 class="text-2xl font-semibold text-gray-900">Private Label / Custom Line</h3>
-                        <p class="text-gray-700">글로벌 유통사를 위한 맞춤형 제품 개발</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. Products (제품 소개) - Style 2 (Right) -->
-        <section id="products" class="min-h-screen grid md:grid-cols-2 items-stretch">
-            <div class="content-box flex flex-col justify-center fade-in-section">
-                <div class="max-w-md mx-auto">
-                    <h2 class="text-4xl mb-8">Products</h2>
-                    <p class="text-gray-700 mb-8 leading-relaxed">
-                        모든 제품은 한국 내 인증된 제조사에서 생산되며,
-                        품질, 안정성, 디자인 측면에서 글로벌 시장 기준을 충족합니다.
-                    </p>
-                    <div class="grid grid-cols-2 gap-6 text-lg text-gray-800">
-                        <div class="bg-black bg-opacity-5 p-4 rounded-md flex items-center"><i class="fas fa-spa fa-fw mr-3 text-pink-300"></i> Skincare</div>
-                        <div class="bg-black bg-opacity-5 p-4 rounded-md flex items-center"><i class="fas fa-magic fa-fw mr-3 text-pink-300"></i> Makeup</div>
-                        <div class="bg-black bg-opacity-5 p-4 rounded-md flex items-center"><i class="fas fa-bath fa-fw mr-3 text-pink-300"></i> Body & Hair</div>
-                        <div class="bg-black bg-opacity-5 p-4 rounded-md flex items-center"><i class="fas fa-male fa-fw mr-3 text-pink-300"></i> Men’s Care</div>
-                        <div class="col-span-2 bg-black bg-opacity-5 p-4 rounded-md flex items-center"><i class="fas fa-brush fa-fw mr-3 text-pink-300"></i> Beauty Tools</div>
-                    </div>
-                </div>
-            </div>
-            <div class="image-box" style="background-image: url('https://images.unsplash.com/photo-1512496015851-a90137ba0a18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
-                <!-- 이미지 저작권: Unsplash의 Joanna Kosinska (화장품 질감) -->
-            </div>
-        </section>
-        
-        <!-- 6. Global Network (글로벌 네트워크) - Style 2 (Left) -->
-        <section id="network" class="min-h-screen grid md:grid-cols-2 items-stretch">
-            <div class="image-box md:order-last" style="background-image: url('https://images.unsplash.com/photo-1534951004801-ab5b2c140b95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
-                <!-- 이미지 저작권: Unsplash의 NASA (글로벌 지도) -->
-            </div>
-            <div class="content-box flex flex-col justify-center md:order-first fade-in-section">
-                <div class="max-w-md mx-auto">
-                    <h2 class="text-4xl mb-8">Global Network</h2>
-                    <p class="text-gray-700 mb-8 leading-relaxed">
-                        Glam Seoul은 전 세계 바이어와 협력하며,
-                        한국의 뷰티 혁신을 글로벌 무대에 연결하고 있습니다.
-                    </p>
-                    <ul class="space-y-4 text-gray-700">
-                        <li><strong><i class="fas fa-globe-americas fa-fw mr-2 text-gray-500"></i> 주요 수출국:</strong> 미국, 프랑스, 일본, 싱가포르, UAE 등</li>
-                        <li><strong><i class="fas fa-hands-helping fa-fw mr-2 text-gray-500"></i> 협력사:</strong> 국내 인증 제조사 및 뷰티 브랜드 50+</li>
-                        <li><strong><i class="fas fa-store fa-fw mr-2 text-gray-500"></i> 유통 채널:</strong> Alibaba / Amazon / Shopee / Rakuten / Lazada</li>
-                        <li><strong><i class="fas fa-certificate fa-fw mr-2 text-gray-500"></i> 인증:</strong> KFDA, ISO, GMP, Vegan, Cruelty-Free 등</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. Contact (문의하기) - Style 3 -->
-        <section id="contact" class="min-h-screen flex items-center justify-center text-center py-20" style="background-color: #F8F7F3;">
-            <div class="max-w-2xl mx-auto px-6 fade-in-section">
-                <h2 class="text-5xl mb-6">Contact Us</h2>
-                <p class="text-xl text-gray-700 mb-10 leading-relaxed">
-                    파트너십, 제품 소싱, 수출 협력 문의는 언제든 환영합니다.
-                </p>
-                
-                <div class="text-lg space-y-4 mb-12 text-left sm:text-center">
-                    <p><i class="fas fa-envelope fa-fw mr-3 text-gray-600"></i> <a href="mailto:contact@glamseoul.com" class="hover:text-black">contact@glamseoul.com</a></p>
-                    <p><i class="fas fa-map-marker-alt fa-fw mr-3 text-gray-600"></i> Address: Seoul, Republic of Korea</p>
-                    <p><i class="fab fa-instagram fa-fw mr-3 text-gray-600"></i> <a href="#" target="_blank" class="hover:text-black">@glamseoul_official</a></p>
+                    <p>날카로운 시장 분석력과 산업 네트워크를 바탕으로 미국, 유럽, 아시아 등 전 세계 바이어에게 한국의 혁신적인 뷰티 브랜드를 연결합니다. 또한 인증된 제조사 및 전문 브랜드와 협력하여 OEM/ODM, 도소매 유통, 수출 대행 서비스를 제공합니다.</p>
                 </div>
                 
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="#" target="_blank" class="action-button"><i class="fab fa-alibaba mr-2"></i> Alibaba Store</a>
-                    <a href="#" target="_blank" class="action-button"><i class="fab fa-amazon mr-2"></i> Amazon Store</a>
+                <div class="vision-box">
+                    <h3><i class="fas fa-star"></i> Vision</h3>
+                    <p>한국의 감성과 기술이 결합된 K-Beauty의 가치를 세계 속에 전하고, 글로벌 뷰티 시장을 선도하는 신뢰받는 브랜드 플랫폼으로 성장합니다.</p>
                 </div>
             </div>
-        </section>
 
-    </main>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="2025">0</div>
+                    <div class="stat-label">Founded</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="50">0+</div>
+                    <div class="stat-label">Partner Brands</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="15">0+</div>
+                    <div class="stat-label">Countries</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="100">0%</div>
+                    <div class="stat-label">Quality Certified</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Section -->
+    <section id="business" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-icon">💼</span>
+                <h2 class="section-title">Business</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">글로벌 K-Beauty 시장을 선도하는 4가지 핵심 사업</p>
+            </div>
+
+            <div class="business-grid">
+                <div class="business-card">
+                    <div class="business-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="business-number">01</div>
+                    <h3>K-Beauty 화장품 및 스킨케어 도소매</h3>
+                    <p>국내외 유통망을 통해 트렌디하고 검증된 K-Beauty 제품을 공급합니다. 브랜드 가치와 품질 중심의 큐레이션으로 시장과 소비자 모두에게 신뢰를 제공합니다.</p>
+                    <div class="business-features">
+                        <span><i class="fas fa-check"></i> 품질 검증</span>
+                        <span><i class="fas fa-check"></i> 트렌드 큐레이션</span>
+                        <span><i class="fas fa-check"></i> 신속한 공급</span>
+                    </div>
+                </div>
+
+                <div class="business-card">
+                    <div class="business-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="business-number">02</div>
+                    <h3>글로벌 무역 및 수출 에이전시 서비스</h3>
+                    <p>수출 프로세스, 인증, 물류, 마케팅까지 원스톱으로 지원하여 한국 뷰티 브랜드의 해외 진출을 돕습니다.</p>
+                    <div class="business-features">
+                        <span><i class="fas fa-check"></i> 수출 컨설팅</span>
+                        <span><i class="fas fa-check"></i> 인증 지원</span>
+                        <span><i class="fas fa-check"></i> 물류 관리</span>
+                    </div>
+                </div>
+
+                <div class="business-card">
+                    <div class="business-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <div class="business-number">03</div>
+                    <h3>브랜드 소싱 및 OEM/ODM 협력</h3>
+                    <p>전문 제조사와 협력하여 해외 파트너 맞춤형 제품을 기획·개발합니다. 제품 콘셉트에서 디자인, 포장, 인증까지 전 과정 컨설팅을 제공합니다.</p>
+                    <div class="business-features">
+                        <span><i class="fas fa-check"></i> 제품 기획</span>
+                        <span><i class="fas fa-check"></i> 디자인 개발</span>
+                        <span><i class="fas fa-check"></i> 품질 관리</span>
+                    </div>
+                </div>
+
+                <div class="business-card">
+                    <div class="business-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="business-number">04</div>
+                    <h3>해외 파트너 맞춤형 제품 개발 및 공급</h3>
+                    <p>각 지역의 트렌드와 소비자 특성에 맞춘 맞춤형 솔루션을 제공합니다.</p>
+                    <div class="business-features">
+                        <span><i class="fas fa-check"></i> 시장 분석</span>
+                        <span><i class="fas fa-check"></i> 맞춤 솔루션</span>
+                        <span><i class="fas fa-check"></i> 지속 지원</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section id="brands" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-icon">💎</span>
+                <h2 class="section-title">Brands</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">Glam Seoul은 한국의 다양한 프리미엄 뷰티 브랜드와 협력합니다</p>
+            </div>
+
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <div class="brand-overlay"></div>
+                    <div class="brand-content">
+                        <h3>GLAM SEOUL ORIGINALS</h3>
+                        <p>자체 기획 프리미엄 스킨케어 라인</p>
+                        <div class="brand-features">
+                            <span>Premium Formulation</span>
+                            <span>Korean Innovation</span>
+                            <span>Global Standards</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brand-card">
+                    <div class="brand-overlay"></div>
+                    <div class="brand-content">
+                        <h3>Partner Brands</h3>
+                        <p>국내 우수 중소 뷰티 브랜드의 해외 진출 파트너</p>
+                        <div class="brand-features">
+                            <span>Verified Quality</span>
+                            <span>Market Tested</span>
+                            <span>Export Ready</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brand-card">
+                    <div class="brand-overlay"></div>
+                    <div class="brand-content">
+                        <h3>Private Label / Custom Line</h3>
+                        <p>글로벌 유통사를 위한 맞춤형 제품 개발</p>
+                        <div class="brand-features">
+                            <span>Custom Development</span>
+                            <span>Flexible MOQ</span>
+                            <span>Fast Delivery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-icon">🧴</span>
+                <h2 class="section-title">Products</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">카테고리별 제품 라인업</p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-category">
+                    <div class="product-image">
+                        <div class="product-overlay">
+                            <i class="fas fa-droplet"></i>
+                        </div>
+                    </div>
+                    <h3>Skincare</h3>
+                    <p>스킨케어</p>
+                </div>
+
+                <div class="product-category">
+                    <div class="product-image">
+                        <div class="product-overlay">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                    </div>
+                    <h3>Makeup</h3>
+                    <p>메이크업</p>
+                </div>
+
+                <div class="product-category">
+                    <div class="product-image">
+                        <div class="product-overlay">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                    </div>
+                    <h3>Body & Hair</h3>
+                    <p>바디 & 헤어</p>
+                </div>
+
+                <div class="product-category">
+                    <div class="product-image">
+                        <div class="product-overlay">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                    </div>
+                    <h3>Men's Care</h3>
+                    <p>남성 화장품</p>
+                </div>
+
+                <div class="product-category">
+                    <div class="product-image">
+                        <div class="product-overlay">
+                            <i class="fas fa-wand-magic-sparkles"></i>
+                        </div>
+                    </div>
+                    <h3>Beauty Tools</h3>
+                    <p>뷰티 소품</p>
+                </div>
+            </div>
+
+            <div class="product-certification">
+                <div class="cert-content">
+                    <i class="fas fa-certificate"></i>
+                    <p>모든 제품은 한국 내 인증된 제조사에서 생산되며,<br>
+                    품질, 안정성, 디자인 측면에서 글로벌 시장 기준을 충족합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Network Section -->
+    <section id="network" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-icon">🌍</span>
+                <h2 class="section-title">Global Network</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">Glam Seoul은 전 세계 바이어와 협력하며,<br>한국의 뷰티 혁신을 글로벌 무대에 연결하고 있습니다</p>
+            </div>
+
+            <div class="network-grid">
+                <div class="network-card">
+                    <div class="network-icon">
+                        <i class="fas fa-earth-americas"></i>
+                    </div>
+                    <h3>주요 수출국</h3>
+                    <div class="network-list">
+                        <span>🇺🇸 미국</span>
+                        <span>🇫🇷 프랑스</span>
+                        <span>🇯🇵 일본</span>
+                        <span>🇸🇬 싱가포르</span>
+                        <span>🇦🇪 UAE</span>
+                    </div>
+                </div>
+
+                <div class="network-card">
+                    <div class="network-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>협력사</h3>
+                    <div class="network-info">
+                        <p>국내 인증 제조사 및<br>뷰티 브랜드</p>
+                        <span class="highlight">50+</span>
+                    </div>
+                </div>
+
+                <div class="network-card">
+                    <div class="network-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>유통 채널</h3>
+                    <div class="network-list">
+                        <span>Alibaba</span>
+                        <span>Amazon</span>
+                        <span>Shopee</span>
+                        <span>Rakuten</span>
+                        <span>Lazada</span>
+                    </div>
+                </div>
+
+                <div class="network-card">
+                    <div class="network-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>인증</h3>
+                    <div class="network-list">
+                        <span>KFDA</span>
+                        <span>ISO</span>
+                        <span>GMP</span>
+                        <span>Vegan</span>
+                        <span>Cruelty-Free</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-icon">💌</span>
+                <h2 class="section-title">Contact</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">파트너십, 제품 소싱, 수출 협력 문의는 언제든 환영합니다</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:contact@glamseoul.com">contact@glamseoul.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Seoul, Republic of Korea</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <div>
+                            <h4>Instagram</h4>
+                            <a href="https://instagram.com/glamseoul_official" target="_blank">@glamseoul_official</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-stores">
+                    <h3>Visit Our Stores</h3>
+                    <div class="store-buttons">
+                        <a href="#" class="store-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Alibaba Store</span>
+                        </a>
+                        <a href="#" class="store-btn">
+                            <i class="fab fa-amazon"></i>
+                            <span>Amazon Store</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="text-center py-10" style="background-color: #E0C9C3;">
-        <!-- 세이지 핑크 톤의 푸터 -->
-        <p class="text-gray-800 text-sm">&copy; 2025 Glam Seoul. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>🩵 GLAM SEOUL</h3>
+                    <p>K-Beauty Global Platform<br>
+                    From Seoul to the World</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#business">Business</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Glam Seoul. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        // --- 네비게이션 바 스크롤 이벤트 ---
-        document.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-        // --- 모바일 메뉴 토글 ---
-        const menuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuLinks = mobileMenu.querySelectorAll('.mobile-menu-link');
-
-        function toggleMenu() {
-            mobileMenu.classList.toggle('opacity-100');
-            mobileMenu.classList.toggle('opacity-0');
-            mobileMenu.classList.toggle('-translate-y-full');
-            mobileMenu.classList.toggle('translate-y-0');
-            
-            // 아이콘 변경 (bars <-> times)
-            const icon = menuButton.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-        }
-
-        menuButton.addEventListener('click', toggleMenu);
-        
-        // 메뉴 항목 클릭 시 메뉴 닫기
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (mobileMenu.classList.contains('opacity-100')) {
-                    toggleMenu();
-                }
-            });
-        });
-
-        // --- 스크롤 페이드-인 애니메이션 ---
-        const sections = document.querySelectorAll('.fade-in-section');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target); // 한 번만 실행
-                }
-            });
-        }, { threshold: 0.1 }); // 10% 보일 때 실행
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
-
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
